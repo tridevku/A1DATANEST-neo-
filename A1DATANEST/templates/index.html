@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A1SATANEST | Laptop Repair & Accessories</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body data-page="home">
+    <header class="site-header glass">
+        <a class="brand" href="/">
+            <img class="brand-logo" src="{{ url_for('static', filename='a1datanest_logo.png') }}" alt="A1SATANEST Logo" />
+        </a>
+        <nav class="nav-links">
+            <a class="nav-item" data-icon="⌂" href="/">Home</a>
+            <a class="nav-item" data-icon="🛠" href="/booking">Book Repair</a>
+            <a class="nav-item" data-icon="⌨" href="/products">Accessories</a>
+            <a class="nav-item" data-icon="❓" href="/support">Support</a>
+            <a class="nav-item" data-icon="✉" href="/contact">Contact</a>
+            <a class="nav-item" data-icon="👤" href="/customer/login">My Account</a>
+            <a href="/admin">Admin</a>
+        </nav>
+        <button id="mobileMenuBtn" class="menu-btn">Menu</button>
+    </header>
+
+    <main>
+        <section class="hero wrap">
+            <div class="hero-content">
+                <p class="kicker">India's smart laptop repair startup</p>
+                <h1>Fast &amp; Trusted Laptop/Desktop Repair Services</h1>
+                <p>
+                    Doorstep pickup, transparent diagnostics, genuine parts, and live status updates.
+                    A1SATANEST gives you both expert repair and quality accessories at startup-friendly prices.
+                </p>
+                <div class="hero-actions">
+                    <a href="/booking" class="btn btn-primary">Book Free Diagnosis</a>
+                    <a href="/products" class="btn btn-ghost">Shop Laptop Parts</a>
+                </div>
+                <div class="stats-grid" id="heroStats">
+                    <article>
+                        <h3>{{ stats.service_requests }}</h3>
+                        <p>Repairs Requested</p>
+                    </article>
+                    <article>
+                        <h3>{{ stats.completed_repairs }}</h3>
+                        <p>Repairs Completed</p>
+                    </article>
+                    <article>
+                        <h3>{{ stats.completion_rate }}%</h3>
+                        <p>On-Time Delivery</p>
+                    </article>
+                    <article>
+                        <h3>{{ stats.orders }}</h3>
+                        <p>Parts Orders</p>
+                    </article>
+                </div>
+            </div>
+            <div class="hero-card glass soft-glow">
+                <h3>Why customers switch to A1SATANEST?</h3>
+                <ul>
+                    <li>Up to 40% cheaper than service center rates</li>
+                    <li>Doorstep pickup and drop in major cities</li>
+                    <li>Genuine parts warranty with invoice</li>
+                    <li>WhatsApp updates at every stage</li>
+                </ul>
+                <a href="/booking" class="btn btn-primary full">Start My Repair</a>
+            </div>
+        </section>
+
+        <section class="wrap section">
+            <div class="section-head">
+                <h2>How it works</h2>
+                <p>A simple 4-step process designed to replace long service center queues.</p>
+            </div>
+            <div class="steps-grid">
+                <article class="card">
+                    <span>01</span>
+                    <h3>Book your issue online</h3>
+                    <p>Share your problem details, get an instant estimate, and select your preferred slot.</p>
+                </article>
+                <article class="card">
+                    <span>02</span>
+                    <h3>Free pickup</h3>
+                    <p>Our engineer collects your laptop with a complete intake checklist.</p>
+                </article>
+                <article class="card">
+                    <span>03</span>
+                    <h3>Repair + QA</h3>
+                    <p>Component level repair, thermal testing, battery health checks.</p>
+                </article>
+                <article class="card">
+                    <span>04</span>
+                    <h3>Delivery + warranty</h3>
+                    <p>Your laptop is returned with a service report, before-and-after proof, and warranty slip.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="wrap section">
+            <div class="section-head">
+                <h2>Customer trust</h2>
+                <p>Recent verified reviews from active users.</p>
+            </div>
+            <div id="reviewList" class="review-grid"></div>
+        </section>
+
+        <section class="wrap section cta-band">
+            <h2>Facing laptop issues or need replacement parts? Get both on one platform.</h2>
+            <p>Book a repair or order accessories online. Our team is available 7 days a week.</p>
+            <div class="hero-actions">
+                <a href="/booking" class="btn btn-primary">Repair Now</a>
+                <a href="/products" class="btn btn-ghost">Browse Products</a>
+            </div>
+        </section>
+    </main>
+
+        <footer class="site-footer site-footer-pro">
+        <div class="wrap footer-grid">
+            <section class="footer-col footer-brand-col">
+                <h3>A1DATANEST</h3>
+                <p>Fast & Trusted Laptop/Desktop Repair Services across India.</p>
+                <ul>
+                    <li>Certified service support</li>
+                    <li>Original parts and accessories</li>
+                    <li>Quick pickup and delivery workflow</li>
+                </ul>
+            </section>
+
+            <section class="footer-col">
+                <h4>Laptop Services</h4>
+                <ul>
+                    <li>Screen replacement</li>
+                    <li>Battery and charging repair</li>
+                    <li>Motherboard level service</li>
+                    <li>Performance upgrades</li>
+                    <li>Software troubleshooting</li>
+                </ul>
+            </section>
+
+            <section class="footer-col">
+                <h4>Accessories & Sales</h4>
+                <ul>
+                    <li>Original chargers and adapters</li>
+                    <li>SSD and RAM upgrades</li>
+                    <li>Cooling pads and peripherals</li>
+                    <li>Keyboard and mouse combos</li>
+                    <li>Network and storage products</li>
+                </ul>
+            </section>
+
+            <section class="footer-col footer-contact-col">
+                <h4>Get In Touch</h4>
+                <p><strong>Call:</strong> <a href="tel:+919113713293">+91 91137 13293</a></p>
+                <p><strong>Call:</strong> <a href="tel:+919135526133">+91 91355 26133</a></p>
+                <p><strong>Email:</strong> <a href="mailto:aonedatanest@gmail.com">aonedatanest@gmail.com</a></p>
+                <p><strong>Instagram:</strong> <a href="https://www.instagram.com/a1datanest?igsh=MTZpa2ZvZXRwdncxdw==" target="_blank" rel="noopener">@a1datanest</a></p>
+                <div class="footer-actions">
+                    <a class="btn btn-ghost" href="/products">Buy Laptop Accessories</a>
+                    <a class="btn btn-primary" href="/booking">Book Laptop Service</a>
+                </div>
+            </section>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Copyright © 2026 A1DATANEST. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+
